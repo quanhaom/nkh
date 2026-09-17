@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+.vercel/
+
+_resources/
+public/maplibre/
+
+.env
+.env.local
+.env.*.local
+
+*.log
+.DS_Store
+Thumbs.db
