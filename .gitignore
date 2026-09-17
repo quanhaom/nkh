@@ -4,8 +4,6 @@ out/
 .vercel/
 
 _resources/
-public/maplibre/
-
 .env
 .env.local
 .env.*.local
