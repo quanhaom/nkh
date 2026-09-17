@@ -277,10 +277,6 @@ export default function VietnamRemainsMap() {
         const maplibre =
           await import("maplibre-gl");
 
-        maplibre.setWorkerUrl(
-          "/maplibre/maplibre-gl-worker.mjs"
-        );
-
         if (
           disposed ||
           !mapContainerRef.current
