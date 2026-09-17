@@ -11,6 +11,11 @@
   overflow: hidden;
 
   background: #f5f8f3;
+
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
 }
 
 /* =========================
@@ -30,6 +35,11 @@
   border-radius: 0;
 
   background: #f5f8f3;
+
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
 }
 
 .map {
@@ -54,29 +64,33 @@
 
   padding: 10px 16px;
 
-  border: 1px solid rgba(34, 103, 69, 0.18);
+  border: 1px solid
+    rgba(34, 103, 69, 0.18);
+
   border-radius: 999px;
 
-  background: rgba(255, 255, 255, 0.95);
+  background:
+    rgba(255, 255, 255, 0.95);
 
   color: #184c33;
 
   font-family:
-    "Segoe UI",
+    var(--font-montserrat),
     Arial,
-    "Helvetica Neue",
-    Helvetica,
     sans-serif;
 
   font-size: 12px;
   font-weight: 700;
+
+  line-height: 1.2;
 
   cursor: pointer;
 
   backdrop-filter: blur(10px);
 
   box-shadow:
-    0 6px 20px rgba(20, 60, 40, 0.08);
+    0 6px 20px
+      rgba(20, 60, 40, 0.08);
 
   transition:
     background 0.2s ease,
@@ -90,6 +104,7 @@
 
 .resetButton:hover {
   background: #226745;
+
   border-color: #226745;
 
   color: #ffffff;
@@ -98,7 +113,9 @@
 }
 
 .resetButton:active {
-  transform: translateY(0) scale(0.98);
+  transform:
+    translateY(0)
+    scale(0.98);
 }
 
 /* =========================
@@ -117,22 +134,24 @@
 
   padding: 14px 15px;
 
-  border: 1px solid rgba(28, 65, 45, 0.08);
+  border: 1px solid
+    rgba(28, 65, 45, 0.08);
+
   border-radius: 14px;
 
-  background: rgba(255, 255, 255, 0.95);
+  background:
+    rgba(255, 255, 255, 0.95);
 
   font-family:
-    "Segoe UI",
+    var(--font-montserrat),
     Arial,
-    "Helvetica Neue",
-    Helvetica,
     sans-serif;
 
   backdrop-filter: blur(12px);
 
   box-shadow:
-    0 12px 35px rgba(18, 45, 30, 0.08);
+    0 12px 35px
+      rgba(18, 45, 30, 0.08);
 
   pointer-events: auto;
 }
@@ -145,7 +164,9 @@
   font-size: 12px;
   font-weight: 800;
 
-  letter-spacing: 0.03em;
+  line-height: 1.3;
+
+  letter-spacing: 0.02em;
 }
 
 .legendRow {
@@ -154,14 +175,16 @@
 
   gap: 8px;
 
-  margin-top: 6px;
+  margin-top: 7px;
 
   color: #253a2f;
 
   font-size: 10px;
-  line-height: 1.35;
+  font-weight: 500;
 
-  opacity: 0.82;
+  line-height: 1.4;
+
+  opacity: 0.84;
 }
 
 .legendColor {
@@ -180,7 +203,8 @@
 }
 
 .defaultProvince {
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid
+    rgba(0, 0, 0, 0.05);
 
   background: #edf1ed;
 }
@@ -192,12 +216,14 @@
   flex-shrink: 0;
 
   border: 2px solid #ffffff;
+
   border-radius: 50%;
 
   background: #226745;
 
   box-shadow:
-    0 0 0 1px rgba(34, 103, 69, 0.18);
+    0 0 0 1px
+      rgba(34, 103, 69, 0.18);
 }
 
 /* =========================
@@ -212,36 +238,44 @@
 
   z-index: 100;
 
-  width: min(360px, calc(100% - 40px));
+  width:
+    min(
+      360px,
+      calc(100% - 40px)
+    );
 
-  max-height: calc(100vh - 100px);
+  max-height:
+    calc(100vh - 100px);
 
   overflow-y: auto;
 
   padding: 22px;
 
-  border: 1px solid rgba(28, 65, 45, 0.08);
+  border: 1px solid
+    rgba(28, 65, 45, 0.08);
+
   border-radius: 16px;
 
-  background: rgba(255, 255, 255, 0.98);
+  background:
+    rgba(255, 255, 255, 0.98);
 
   color: #1d2a23;
 
   font-family:
-    "Segoe UI",
+    var(--font-montserrat),
     Arial,
-    "Helvetica Neue",
-    Helvetica,
     sans-serif;
 
   backdrop-filter: blur(14px);
 
   box-shadow:
-    0 20px 50px rgba(18, 45, 30, 0.15);
+    0 20px 50px
+      rgba(18, 45, 30, 0.15);
 
   pointer-events: auto;
 
   scrollbar-width: thin;
+
   scrollbar-color:
     rgba(34, 103, 69, 0.25)
     transparent;
@@ -258,18 +292,28 @@
 .infoPanel::-webkit-scrollbar-thumb {
   border-radius: 999px;
 
-  background: rgba(34, 103, 69, 0.22);
+  background:
+    rgba(34, 103, 69, 0.22);
 }
 
 .infoPanel h3 {
-  margin: 5px 36px 0 0;
+  margin:
+    5px
+    36px
+    0
+    0;
 
   color: #173d29;
+
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
 
   font-size: 23px;
   font-weight: 800;
 
-  line-height: 1.15;
+  line-height: 1.2;
 
   letter-spacing: -0.025em;
 }
@@ -277,10 +321,17 @@
 .infoLabel {
   color: #226745;
 
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
+
   font-size: 9px;
   font-weight: 800;
 
-  letter-spacing: 0.14em;
+  line-height: 1.4;
+
+  letter-spacing: 0.12em;
 
   text-transform: uppercase;
 
@@ -297,25 +348,35 @@
 }
 
 .locationName {
-  margin-top: 6px;
+  margin-top: 7px;
 
   color: #22382d;
+
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
 
   font-size: 14px;
   font-weight: 700;
 
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .remainsNumber {
-  margin-top: 6px;
+  margin-top: 7px;
 
   color: #226745;
 
-  font-size: 32px;
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
+
+  font-size: 31px;
   font-weight: 800;
 
-  line-height: 1;
+  line-height: 1.1;
 
   letter-spacing: -0.03em;
 }
@@ -325,7 +386,13 @@
 
   color: #35463d;
 
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
+
   font-size: 12px;
+  font-weight: 500;
 
   line-height: 1.5;
 
@@ -337,39 +404,60 @@
 
   color: #2c3a33;
 
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
+
   font-size: 13px;
+  font-weight: 400;
 
-  line-height: 1.7;
+  line-height: 1.75;
 
-  opacity: 0.86;
+  opacity: 0.88;
 }
 
 .detailList {
-  margin: 8px 0 0;
+  margin:
+    8px
+    0
+    0;
 
   padding-left: 18px;
 }
 
 .detailList li {
-  margin-top: 7px;
+  margin-top: 8px;
 
   color: #2c3a33;
 
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
+
   font-size: 13px;
+  font-weight: 400;
 
-  line-height: 1.6;
+  line-height: 1.7;
 
-  opacity: 0.82;
+  opacity: 0.84;
 }
 
 .noData {
   color: #34453c;
 
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
+
   font-size: 13px;
+  font-weight: 400;
 
-  line-height: 1.6;
+  line-height: 1.7;
 
-  opacity: 0.65;
+  opacity: 0.68;
 }
 
 /* =========================
@@ -394,6 +482,7 @@
   padding: 0;
 
   border: 0;
+
   border-radius: 50%;
 
   background: #eef4ef;
@@ -401,10 +490,8 @@
   color: #184c33;
 
   font-family:
-    "Segoe UI",
+    var(--font-montserrat),
     Arial,
-    "Helvetica Neue",
-    Helvetica,
     sans-serif;
 
   font-size: 24px;
@@ -415,6 +502,7 @@
   cursor: pointer;
 
   pointer-events: auto;
+
   touch-action: manipulation;
 
   user-select: none;
@@ -442,28 +530,29 @@
 ========================= */
 
 .provinceMapLabel {
-  padding: 3px 6px;
+  padding: 4px 7px;
 
-  border: 1px solid rgba(34, 103, 69, 0.06);
-  border-radius: 4px;
+  border: 1px solid
+    rgba(34, 103, 69, 0.07);
 
-  background: rgba(255, 255, 255, 0.88);
+  border-radius: 5px;
+
+  background:
+    rgba(255, 255, 255, 0.9);
 
   color: #153f29;
 
   font-family:
-    "Segoe UI",
+    var(--font-montserrat),
     Arial,
-    "Helvetica Neue",
-    Helvetica,
     sans-serif;
 
   font-size: 8px;
-  font-weight: 800;
+  font-weight: 700;
 
-  line-height: 1.2;
+  line-height: 1.3;
 
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
 
   white-space: nowrap;
 
@@ -472,7 +561,8 @@
   user-select: none;
 
   box-shadow:
-    0 2px 8px rgba(20, 60, 40, 0.08);
+    0 2px 8px
+      rgba(20, 60, 40, 0.08);
 
   backdrop-filter: blur(3px);
 }
@@ -488,10 +578,8 @@
   gap: 7px;
 
   font-family:
-    "Segoe UI",
+    var(--font-montserrat),
     Arial,
-    "Helvetica Neue",
-    Helvetica,
     sans-serif;
 
   pointer-events: none;
@@ -506,41 +594,52 @@
   flex-shrink: 0;
 
   border: 2px solid #ffffff;
+
   border-radius: 50%;
 
   background: #226745;
 
   box-shadow:
-    0 2px 10px rgba(18, 45, 30, 0.3);
+    0 2px 10px
+      rgba(18, 45, 30, 0.3);
 }
 
 .archipelagoLabel {
   padding: 4px 7px;
 
-  border: 1px solid rgba(28, 65, 45, 0.12);
+  border: 1px solid
+    rgba(28, 65, 45, 0.12);
+
   border-radius: 5px;
 
-  background: rgba(255, 255, 255, 0.92);
+  background:
+    rgba(255, 255, 255, 0.92);
 
   color: #184c33;
+
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
 
   font-size: 8px;
   font-weight: 800;
 
-  line-height: 1.2;
+  line-height: 1.3;
 
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
 
   white-space: nowrap;
 
   box-shadow:
-    0 3px 12px rgba(18, 45, 30, 0.08);
+    0 3px 12px
+      rgba(18, 45, 30, 0.08);
 
   backdrop-filter: blur(5px);
 }
 
 /* =========================
-   POPUP
+   MAP POPUP
 ========================= */
 
 .mapPopup {
@@ -554,47 +653,57 @@
   color: #1d2a23;
 
   font-family:
-    "Segoe UI",
+    var(--font-montserrat),
     Arial,
-    "Helvetica Neue",
-    Helvetica,
     sans-serif;
 }
 
 .mapPopup strong {
   color: #184c33;
 
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
+
   font-size: 12px;
   font-weight: 800;
 
-  line-height: 1.35;
+  line-height: 1.4;
 
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
 }
 
 .mapPopup div {
   color: #2f4137;
 
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
+
   font-size: 11px;
+  font-weight: 400;
 
-  line-height: 1.45;
+  line-height: 1.5;
 
-  opacity: 0.78;
+  opacity: 0.8;
 }
 
 .popupLocation {
   margin-top: 2px;
 
-  font-weight: 700;
+  font-weight: 700 !important;
 
-  opacity: 0.92 !important;
+  opacity: 0.94 !important;
 }
 
 .popupNumber {
   color: #226745 !important;
 
   font-size: 14px !important;
-  font-weight: 800;
+
+  font-weight: 800 !important;
 
   opacity: 1 !important;
 }
@@ -602,16 +711,21 @@
 .popupHint {
   display: inline-block;
 
-  margin-top: 3px;
+  margin-top: 4px;
 
   color: #226745;
+
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
 
   font-size: 9px;
   font-weight: 700;
 
   line-height: 1.4;
 
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 
   text-transform: uppercase;
 
@@ -645,10 +759,8 @@
   color: #1d2a23;
 
   font-family:
-    "Segoe UI",
+    var(--font-montserrat),
     Arial,
-    "Helvetica Neue",
-    Helvetica,
     sans-serif;
 
   backdrop-filter: blur(4px);
@@ -659,6 +771,11 @@
   align-items: center;
 
   gap: 9px;
+
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
 
   font-size: 13px;
   font-weight: 600;
@@ -711,12 +828,14 @@
   color: #173d29;
 
   font-size: 15px;
+  font-weight: 700;
 }
 
 .error span {
   max-width: 500px;
 
   font-size: 12px;
+  font-weight: 400;
 
   line-height: 1.6;
 
@@ -724,13 +843,14 @@
 }
 
 /* =========================
-   PANEL REVEAL ANIMATION
+   PANEL ANIMATION
 ========================= */
 
 .revealItem {
   opacity: 0;
 
-  transform: translateY(8px);
+  transform:
+    translateY(8px);
 
   animation:
     revealMapInfo
@@ -762,13 +882,15 @@
   from {
     opacity: 0;
 
-    transform: translateY(8px);
+    transform:
+      translateY(8px);
   }
 
   to {
     opacity: 1;
 
-    transform: translateY(0);
+    transform:
+      translateY(0);
   }
 }
 
@@ -776,31 +898,48 @@
    MAPLIBRE CONTROLS
 ========================= */
 
-.mapShell :global(.maplibregl-ctrl-top-right) {
+.mapShell
+  :global(
+    .maplibregl-ctrl-top-right
+  ) {
   top: 12px;
   right: 12px;
 }
 
-.mapShell :global(.maplibregl-ctrl-group) {
+.mapShell
+  :global(
+    .maplibregl-ctrl-group
+  ) {
   overflow: hidden;
 
-  border: 1px solid rgba(28, 65, 45, 0.08);
+  border: 1px solid
+    rgba(28, 65, 45, 0.08);
 
   border-radius: 10px;
 
   box-shadow:
-    0 5px 16px rgba(18, 45, 30, 0.08);
+    0 5px 16px
+      rgba(18, 45, 30, 0.08);
 }
 
-.mapShell :global(.maplibregl-ctrl-group button) {
+.mapShell
+  :global(
+    .maplibregl-ctrl-group button
+  ) {
   width: 32px;
   height: 32px;
 
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color:
+    rgba(255, 255, 255, 0.96);
+
+  font-family:
+    var(--font-montserrat),
+    Arial,
+    sans-serif;
 }
 
 /* =========================
-   RESPONSIVE
+   TABLET / MOBILE
 ========================= */
 
 @media (max-width: 768px) {
@@ -817,7 +956,8 @@
     top: 60px;
     left: 12px;
 
-    width: calc(100% - 24px);
+    width:
+      calc(100% - 24px);
 
     max-height: 68vh;
 
@@ -829,7 +969,7 @@
   }
 
   .remainsNumber {
-    font-size: 28px;
+    font-size: 27px;
   }
 
   .legend {
@@ -875,16 +1015,26 @@
     font-size: 22px;
   }
 
-  .mapShell :global(.maplibregl-ctrl-top-right) {
+  .mapShell
+    :global(
+      .maplibregl-ctrl-top-right
+    ) {
     top: 8px;
     right: 8px;
   }
 
-  .mapShell :global(.maplibregl-ctrl-group button) {
+  .mapShell
+    :global(
+      .maplibregl-ctrl-group button
+    ) {
     width: 30px;
     height: 30px;
   }
 }
+
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media (max-width: 480px) {
   .legend {
@@ -900,5 +1050,14 @@
 
   .infoPanel {
     max-height: 64vh;
+  }
+
+  .infoPanel h3 {
+    font-size: 19px;
+  }
+
+  .summaryText,
+  .detailList li {
+    font-size: 12px;
   }
 }
