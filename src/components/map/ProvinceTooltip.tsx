@@ -14,13 +14,36 @@ export default function ProvinceTooltip({
     return null;
   }
 
+  function handleClose(
+    event:
+      | React.MouseEvent<HTMLButtonElement>
+      | React.PointerEvent<HTMLButtonElement>
+  ) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    onClose();
+  }
+
   return (
-    <div className={styles.infoPanel}>
+    <div
+      className={styles.infoPanel}
+      onClick={(event) => {
+        event.stopPropagation();
+      }}
+      onPointerDown={(event) => {
+        event.stopPropagation();
+      }}
+    >
       <button
         type="button"
         className={styles.closeButton}
-        onClick={onClose}
-        aria-label="Đóng"
+        aria-label="Đóng bảng thông tin"
+        title="Đóng"
+        onClick={handleClose}
+        onPointerDown={(event) => {
+          event.stopPropagation();
+        }}
       >
         ×
       </button>
@@ -31,51 +54,74 @@ export default function ProvinceTooltip({
         <div className={styles.infoLabel}>
           TỈNH / THÀNH PHỐ
         </div>
-        <h3>{selectedProvince.province}</h3>
+
+        <h3>
+          {selectedProvince.province}
+        </h3>
       </div>
 
       {selectedProvince.tracked ? (
         <>
-          <div
-            className={`${styles.revealItem} ${styles.reveal2}`}
-          >
-            <div className={styles.divider} />
-            <div className={styles.infoLabel}>
-              KHU VỰC / ĐỊA ĐIỂM
-            </div>
-            <div className={styles.locationName}>
-              {selectedProvince.siteName}
-            </div>
-          </div>
+          {selectedProvince.siteName && (
+            <div
+              className={`${styles.revealItem} ${styles.reveal2}`}
+            >
+              <div className={styles.divider} />
 
-          <div
-            className={`${styles.revealItem} ${styles.reveal3}`}
-          >
-            <div className={styles.divider} />
-            <div className={styles.infoLabel}>
-              HÀI CỐT TÌM THẤY
+              <div className={styles.infoLabel}>
+                ĐỊA ĐIỂM
+              </div>
+
+              <div className={styles.locationName}>
+                {selectedProvince.siteName}
+              </div>
             </div>
-            <div className={styles.remainsNumber}>
-              {selectedProvince.remainsFound?.toLocaleString(
-                "vi-VN"
+          )}
+
+          {typeof selectedProvince.remainsFound ===
+            "number" && (
+            <div
+              className={`${styles.revealItem} ${styles.reveal3}`}
+            >
+              <div className={styles.divider} />
+
+              <div className={styles.infoLabel}>
+                HÀI CỐT ĐƯỢC PHÁT HIỆN
+              </div>
+
+              <div className={styles.remainsNumber}>
+                {selectedProvince.province ===
+                "Tuyên Quang"
+                  ? `Khoảng ${selectedProvince.remainsFound.toLocaleString(
+                      "vi-VN"
+                    )}`
+                  : selectedProvince.remainsFound.toLocaleString(
+                      "vi-VN"
+                    )}
+              </div>
+
+              {typeof selectedProvince.gravesFound ===
+                "number" && (
+                <div className={styles.subMeta}>
+                  {
+                    selectedProvince.gravesFound
+                  }{" "}
+                  mộ tập thể
+                </div>
               )}
             </div>
-            {typeof selectedProvince.gravesFound ===
-              "number" && (
-              <div className={styles.subMeta}>
-                {selectedProvince.gravesFound} mộ tập thể
-              </div>
-            )}
-          </div>
+          )}
 
           {selectedProvince.summary && (
             <div
               className={`${styles.revealItem} ${styles.reveal4}`}
             >
               <div className={styles.divider} />
+
               <div className={styles.infoLabel}>
-                TÓM TẮT
+                THÔNG TIN
               </div>
+
               <div className={styles.summaryText}>
                 {selectedProvince.summary}
               </div>
@@ -83,18 +129,31 @@ export default function ProvinceTooltip({
           )}
 
           {selectedProvince.details &&
-            selectedProvince.details.length > 0 && (
+            selectedProvince.details.length >
+              0 && (
               <div
                 className={`${styles.revealItem} ${styles.reveal5}`}
               >
                 <div className={styles.divider} />
-                <div className={styles.infoLabel}>
+
+                <div
+                  className={
+                    styles.infoLabel
+                  }
+                >
                   CHI TIẾT
                 </div>
-                <ul className={styles.detailList}>
+
+                <ul
+                  className={
+                    styles.detailList
+                  }
+                >
                   {selectedProvince.details.map(
                     (item, index) => (
-                      <li key={index}>{item}</li>
+                      <li key={index}>
+                        {item}
+                      </li>
                     )
                   )}
                 </ul>
@@ -106,8 +165,9 @@ export default function ProvinceTooltip({
           className={`${styles.revealItem} ${styles.reveal2}`}
         >
           <div className={styles.divider} />
+
           <div className={styles.noData}>
-            Chưa có thông tin cho tỉnh/thành này trong dữ liệu hiện tại.
+            Chưa có thông tin cho tỉnh/thành này.
           </div>
         </div>
       )}
